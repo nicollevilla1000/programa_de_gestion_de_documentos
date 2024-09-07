@@ -1,0 +1,24 @@
+.date {
+    font-size: 14px;
+    text-align: center;
+
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date svg {
+    fill: var(--lines-color);
+    width: 14px;
+    height: 14px;
+}
+
+.top-right {
+    top: 30px;
+    right: 60px;
+}
+
+.top-left {
+    top: 30px;
+    left: 60px;
+}

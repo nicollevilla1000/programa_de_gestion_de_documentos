@@ -1,0 +1,37 @@
+.nav-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.idioma-icon-barra-superior-govco {
+	height: 1.5rem;
+	background-color: var(--white);
+	color: var(--navbar-color);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0 10px;
+
+	cursor: pointer;
+	
+	border-radius: 0.313rem;
+	border: 0.125rem solid var(--white);
+
+	font-family: "govco-font";
+	font-size: 11px;
+}
+
+.idioma-icon-barra-superior-govco:hover {
+  	background-color: var(--navbar-color);
+	color: var(--white);
+}
+
+.idioma-icon-barra-superior-govco:focus {
+	outline: max(0.125rem, 0.15em) solid var(--white);
+	outline-offset: max(0.188rem, 0.15em);
+}

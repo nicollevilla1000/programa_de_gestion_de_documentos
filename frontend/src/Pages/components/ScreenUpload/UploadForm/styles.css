@@ -1,0 +1,7 @@
+.upload-form-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	box-sizing: border-box;
+}

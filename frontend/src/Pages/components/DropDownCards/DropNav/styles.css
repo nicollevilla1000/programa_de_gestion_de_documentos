@@ -1,0 +1,80 @@
+.dropnav-button {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid var(--gov-accesibility-card);
+    background-color: var(--light-gray-color);
+
+    color: var(--text-color);
+}
+.btn.show {
+    border-bottom: 2px solid var(--gov-accesibility-card);
+    background-color: var(--gov-accesibility-card);
+
+    color: var(--white-to-black-color);
+
+}
+.dropnav-button:hover {
+    border-bottom: 2px solid var(--gov-accesibility-card);
+    background-color: var(--gov-accesibility-card);
+
+    color: var(--white-to-black-color);
+}
+
+.dropnav-grid-container {
+    width: 175%;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 10px;
+    background-color: var(--white-to-black-color);
+    border-left: 1px solid var(--gov-accesibility-card);
+    border-radius: 0;
+
+
+    animation-name: dropdown;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+}
+
+@keyframes dropdown {
+    100% {
+        transform: translateY(15%);
+    }
+}
+
+
+.dropnav-anchor-container {
+    font-size: 14px;
+    text-decoration: none;
+
+    width: 100%;
+    margin-bottom: 2.5px;
+
+}
+
+.dropnav-anchor-container a {
+    width: 100%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    color: var(--black-to-white-color);
+}
+.dropnav-anchor-container:hover a {
+    text-decoration: underline;
+    color: var(--gov-accesibility-card);
+    transform: translateX(10px);
+}
+
+.dropnav-anchor-container svg {
+    width: 15px;
+    height: 15px;
+}

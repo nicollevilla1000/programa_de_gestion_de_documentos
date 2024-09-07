@@ -1,0 +1,23 @@
+.button-card-container {
+    width: 100%;
+    background-color: transparent;
+
+    /* border: 1px solid var(--lines-color); */
+    border-style: solid;
+    border-color: var(--lines-color);
+    cursor: pointer;
+
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 16px;
+	opacity: 0.9;
+	transition: background-color 0.20s ease;
+}
+.button-card-container:hover {
+    background-color: var(--lines-color);
+    color: var(--white-to-black-color);
+}
+.button-card-container svg {
+    width: 20px;
+    height: 20px;
+}

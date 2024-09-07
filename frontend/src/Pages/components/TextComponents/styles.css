@@ -1,0 +1,19 @@
+.text-card {
+    width: 100%;
+    color: var(--text-color);
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    transition: all 0.1s ease;
+}
+.span-card {
+    font-weight: bold;
+    color: var(--gov-accesibility-card);
+    font-size: 16px;
+
+    transition: all 0.1s ease;
+}
+.bold {
+    font-weight: bold;
+}

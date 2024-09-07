@@ -1,0 +1,23 @@
+.pagination-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.pagination-buttons-container button{
+    background-color: var(--light-gray-color);
+    padding: 10px 25px;
+    cursor: pointer;
+
+
+    transition: all 0.2s ease;
+}
+.pagination-buttons-container button:hover {
+    background-color: var(--lines-color2);
+    fill: var(--black-to-white-color);
+}
+
+.pagination-buttons-container button svg{
+    fill: var(--black-to-white-color);
+    width: 20px;
+    height: 20px;
+}

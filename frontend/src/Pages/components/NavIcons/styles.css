@@ -1,0 +1,50 @@
+.nav-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons-container a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+
+    transition: transform .25s ease;
+}
+.nav-icons-container button:not(.nav-button) {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+.nav-icons-container a:hover:not(.nav-link),
+.nav-icons-container button:hover:not(.nav-button){
+    transform: scale(1.25);
+    padding: 0;
+}
+
+
+.nav-icons-container svg {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-icons-container .nav-button {
+    width: 100px;
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 0px;
+
+    color: var(--navbar-color);
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: all 0.1s ease;
+}
+.nav-icons-container .nav-button:hover {
+    color: var(--white);
+    background: var(--municipios-and-result-border-clicked);
+}

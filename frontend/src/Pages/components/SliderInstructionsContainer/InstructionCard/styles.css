@@ -1,0 +1,6 @@
+.instruction-icon-container svg {
+    width: 100px;
+    height: 100px;
+
+    color: var(--lines-color);
+}

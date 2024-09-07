@@ -1,0 +1,53 @@
+.accesibility-icons-container {
+    z-index: 2;
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.accesibility-icons-container div{
+    background-color: var(--gov-accesibility-card);
+
+    display: flex;
+    gap: 16px;
+    padding: 21px 12px;
+
+    box-sizing: border-box;
+    
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.accesibility-icons-container button{
+    width: 24px;
+    height: 24px;
+
+    background-color: var(--white);
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+}
+.accesibility-icons-container button svg{
+    width: 15px;
+    height: 15px;
+
+    fill: var(--gov-accesibility-card);
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.accesibility-icons-container button:hover svg {
+    transform: scale(1.15);
+}

@@ -1,0 +1,17 @@
+.loading-container {
+	box-sizing: border-box;
+
+	padding: 15px;
+	border-radius: 10px;
+
+	background-color: var(--light-gray-color);
+	/* border: 1px solid var(--gov-accesibility-card); */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	bottom: 30px;
+	right: 35px;
+	z-index: 1;
+}
