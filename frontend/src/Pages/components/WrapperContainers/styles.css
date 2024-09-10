@@ -1,9 +1,10 @@
 .wrapper-container1 {
     width: 100%;
-    background-color: transparent;
+    background-color: var(--lines-color2);
     box-sizing: border-box;
 
     border: 1px solid var(--lines-color);
+    border-radius: 30px;
 
     display: flex;
     align-items: center;

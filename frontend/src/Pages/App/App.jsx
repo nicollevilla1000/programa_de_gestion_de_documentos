@@ -73,7 +73,6 @@ const App = () => {
                     </MainContainer>
 
                     <ToastContainer/>
-                    <Footer/>
                 </Wrapper>
             </HashRouter>
         </AppProvider>

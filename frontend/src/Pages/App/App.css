@@ -1,30 +1,15 @@
 :root{
-    --navbar-color: #84ff00;
-    --main-body-color: #EEFAFF;
-    --main-title-color: #681d35;
-    --light-gray-color: rgba(236,236,236,0.7);
-    --confirm-color: #069169;
-    --cancel-color: #D31F3F;
-    --time-color: #3366cc;
-    --gov-accesibility-card: #E0161E;
+    --navbar-color: #3CA6A6;
+    --main-body-color: #012E40;
+    --all-info-container-color: #024959;
+    --lines-color2: #026773;
+    --lines-color: #3CA6A6;
+    --gov-accesibility-card: #3CA6A6;
+    --main-title-color: #F2E3D5;
+    --text-color: #F2E3D5;
     --black-to-white-color: #000000;
     --white-to-black-color: #FFFFFF;
-    --lines-color: #ff03e2;
-    --lines-color2: #04f7a2;
-    --text-color: #717171;
-    --all-info-container-color: #E6EFFD;
 
-
-    --icon-colors: #DCDCDC;
-    --footer-color:  rgba(104, 29, 53, 1);
-
-    --navbar-height: 150px;
-
-
-
-    --text-color: #7F7F7F;
-
-    --filters-input-color: #FFF;
 
     --white: rgba(255,255,255,1);
     --white-025: rgba(255,255,255,.25);
@@ -35,15 +20,6 @@
     --black: rgba(0,0,0,1);
     --black-025: rgba(0,0,0,0.25);
     --black-05: rgba(0,0,0,0.5);
-
-    --tool-tip-map-text-color: #7B7B7B;
-
-    --result-text-card: #7B7B7B;
-    --results-card-hover: rgba(250,250, 250);
-    --municipio-card-clicked: #F2F2F2;
-    --results-image-hover: rgba(0,0,0, 0.20);
-
-    --delete-selection-button-color: #DA4F6A;
 }
 
 @font-face {

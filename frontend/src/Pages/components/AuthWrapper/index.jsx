@@ -25,6 +25,7 @@ const AuthWrapper = ({children}) => {
                     context.setName(data.name);
                 } else {
                     context.setAuth(false);
+                    navigate("/login");
                 }
             })
             .catch(err => {

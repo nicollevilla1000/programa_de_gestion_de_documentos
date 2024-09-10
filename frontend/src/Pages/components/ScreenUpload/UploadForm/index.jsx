@@ -56,15 +56,17 @@ const UploadForm = () => {
 
                 <UploadFileCard
                     id={"file"}
-                    onChange={(event) => handleFileChange(event, ['.xlsx', '.pdf'], setValues)}
+                    onChange={(event) => handleFileChange(event, ['.pdf'], setValues)}
                     filesArray={values?.files}
+                    accept=".pdf"
+                    info="Archivos PDF (.pdf)"
                 />
 
                 <ButtonCard 
-                    title="Guardar y Publicar Archivo"
+                    title="Enviar Archivo"
                     type="submit"
                 >
-                    Guardar y Publicar Archivo
+                    Enviar Archivo
                 </ButtonCard>
             </form>
         </WrapperContainer1>

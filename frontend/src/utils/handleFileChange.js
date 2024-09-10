@@ -15,7 +15,7 @@ const handleFileChange = (event, extensions, setState) => {
             files = null;
             handleInputChange("files", null, setState);
             event.target.value = null;
-            return handleNotifications("error", `Por favor, seleccione un archivo .xlsx o .pdf válido. ${item.name}`)
+            return handleNotifications("error", `Por favor, seleccione un archivo .pdf válido. ${item.name}`)
         }
     })
 
