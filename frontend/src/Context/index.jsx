@@ -56,7 +56,7 @@ const AppProvider = ({children}) => {
     //CAMBIO DE COLORES
     const [activeHighContrast, setActiveHighContrast] = React.useState(false);
     React.useEffect(() => {
-        handleColorsByFilters(activeHighContrast);
+        // handleColorsByFilters(activeHighContrast);
     }, [activeHighContrast]);
 
 

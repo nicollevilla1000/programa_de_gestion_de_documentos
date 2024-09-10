@@ -1,5 +1,5 @@
 :root{
-    --navbar-color: #3366cc;
+    --navbar-color: #84ff00;
     --main-body-color: #EEFAFF;
     --main-title-color: #681d35;
     --light-gray-color: rgba(236,236,236,0.7);
@@ -9,8 +9,8 @@
     --gov-accesibility-card: #E0161E;
     --black-to-white-color: #000000;
     --white-to-black-color: #FFFFFF;
-    --lines-color: #681d35;
-    --lines-color2: #681d35;
+    --lines-color: #ff03e2;
+    --lines-color2: #04f7a2;
     --text-color: #717171;
     --all-info-container-color: #E6EFFD;
 

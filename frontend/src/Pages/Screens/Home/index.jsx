@@ -11,10 +11,16 @@ const Home = ({data}) => {
 
         <AuthWrapper>
             <WrapperContainer2 flexDirection="column" padding={0} gap={0}>
+
                 <Title>
                     DATAEMPLEO
                 </Title>
                 <HomeInfoContainer data={data}/>
+            </WrapperContainer2>
+            <WrapperContainer2>
+                <Title>
+                    Gestor de Documentos
+                </Title>
             </WrapperContainer2>
         </AuthWrapper>
     );
