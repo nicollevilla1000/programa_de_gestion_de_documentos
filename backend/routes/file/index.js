@@ -1,4 +1,7 @@
+const OpenAI = require('openai');
+
 const express = require("express");
+
 const router = express.Router();
 
 const { upload } = require("../../middlewares/multer.config");
@@ -6,6 +9,16 @@ const { upload } = require("../../middlewares/multer.config");
 const { readFolder } = require("../../Utils/files/readFolder");
 const { formatFile } = require("../../Utils/files/formatFile");
 const { validateFile } = require("../../Utils/validateFiles");
+
+const PropertiesReader = require('properties-reader');
+const properties = PropertiesReader('./app.properties.ini');
+
+
+// Configuración de OpenAI
+const client = new OpenAI({
+	apiKey: `${properties.get('app.gpt.key')}`,
+  });
+
 
 // GET File
 router.get('/', async (request, response) => {
@@ -59,7 +72,16 @@ router.post("/upload", upload.array("file"), async (request, response) => {
 
 		validateFile(uploadedFiles);
 
-		return response.json({Status: "Success", message: "Archivos cargado correctamente"})
+		const completion = await client.chat.completions.create({
+			model: "gpt-4o-mini",
+			messages: [
+				{"role": "user", "content": "Present yourself"}
+			]
+		});
+
+		const message = completion.choices[0].message;
+
+		return response.json({Status: "Success", message: message});
 	}
 	catch (err) {
 		return response.status(500).json({Error: err.message});

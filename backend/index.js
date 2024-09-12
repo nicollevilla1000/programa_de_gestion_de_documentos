@@ -12,15 +12,6 @@ const port = 3080;
 const whiteList = [
     // Local
 	"http://localhost:5173",
-
-    // DEV Y QA
-    "http://10.140.0.16:15205",
-	"https://ambientesdepruebas.serviciodeempleo.gov.co",
-
-	// PROD
-	"https://dataempleo.serviciodeempleo.gov.co",
-	"https://dataempleo.serviciodeempleo.gov.co/dataempleo",
-	"dataempleo.serviciodeempleo.gov.co"
 ];
 
 const options = {
@@ -40,12 +31,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.options("*", cors(options));
-
-
-app.get("/", (request, response) => {
-	response.redirect("https://www.serviciodeempleo.gov.co")
-});
-
 
 routerApi(app);
 
