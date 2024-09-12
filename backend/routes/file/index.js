@@ -15,7 +15,7 @@ const properties = PropertiesReader('./app.properties.ini');
 
 
 // Configuración de OpenAI
-const client = new OpenAI({
+const openai = new OpenAI({
 	apiKey: `${properties.get('app.gpt.key')}`,
   });
 
@@ -72,16 +72,16 @@ router.post("/upload", upload.array("file"), async (request, response) => {
 
 		validateFile(uploadedFiles);
 
-		const completion = await client.chat.completions.create({
+		const stream = await openai.chat.completions.create({
 			model: "gpt-4o-mini",
-			messages: [
-				{"role": "user", "content": "Present yourself"}
-			]
+			messages: [{ role: "user", content: "Say this is a test" }],
+			stream: true,
 		});
+		for await (const chunk of stream) {
+			console.log(chunk.choices[0].delta.content || "");
+		}
 
-		const message = completion.choices[0].message;
-
-		return response.json({Status: "Success", message: message});
+		return response.json({Status: "Success", message: "Archivo cargado correctamente"});
 	}
 	catch (err) {
 		return response.status(500).json({Error: err.message});
