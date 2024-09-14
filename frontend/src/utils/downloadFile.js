@@ -11,37 +11,16 @@ const handleDownload = (url, name) => {
     handleNotifications("info", `Se descargó ${name}`);
 }
 
-const handleOpenFile = (uri) => {
-    window.open(uri, '_blank');
-}
-
-const handleDownloadFile = async (item) => {
+const handleDownloadFile = async (uri) => {
     try {
-        const file = await handleGetFile(item.link)
+        const file = await handleGetFile(uri)
         const url = window.URL.createObjectURL(file);
     
-        handleDownload(url, item.array[0])
+        handleDownload(url, "output.docx")
     } 
     catch (err) {
         handleNotifications("error", err.message);
     }
 }
 
-const handleOpen = async (item, onExcel) => {
-    try {
-        const file = await handleGetFile(item?.link)
-        const url = window.URL.createObjectURL(file);
-
-        const validateType = {
-            "pdf": () => { handleOpenFile(url) },
-            "xlsx": () => { onExcel(file, item) },
-        }
-        validateType[item?.fileType]();
-        
-    } 
-    catch (err) {
-        handleNotifications("error", err.message);
-    }
-}
-
-export { handleDownload, handleOpenFile, handleDownloadFile, handleOpen }
+export { handleDownload, handleDownloadFile }
