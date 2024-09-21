@@ -65,7 +65,6 @@ router.post("/upload", upload.array("file"), async (request, response) => {
 		return response.json({Status: "Success", message: "Archivo procesado correctamente"});
 	}
 	catch (err) {
-		console.log(err)
 		return response.status(500).json({Error: err.message});
 	}
 })
