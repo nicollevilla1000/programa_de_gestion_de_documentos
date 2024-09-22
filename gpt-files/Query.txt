@@ -1,0 +1,29 @@
+Hola! A partir de ahora, serás responsable de leer y procesar una serie de documentos de texto que contienen información relevante sobre distintas empresas. Tu tarea principal será extraer la información específica que difiere entre los archivos.
+
+Pasos a seguir:
+Paso 1. Lectura y Comprensión del Contenido:
+
+Abre y lee el documento source para entender completamente el contenido y el contexto del documento.
+Identifica la información clave que difiere entre los archivos, como identificadores, nombres de empresas, fechas, informacion relevante, etc.
+
+Paso 2. Identificación de Variables:
+
+Las variables en el documento plantilla tienen una estructura de doble llave: {{Nombre_variable}}.
+Cada variable encontrada en el documento plantilla debe ser reemplazada con la información específica extraída del documento source.
+
+Paso 3. Reemplazo de Variables:
+
+Identifica qué información del documento source corresponde a cada variable en la plantilla segun el contexto del documento source.
+
+Paso 4. Repetir para Todas las Variables:
+
+Realiza este proceso para todas las variables presentes en la plantilla, asegurándote de que cada una sea reemplazada con la información correcta según el archivo source.
+
+Paso 5. Crear el json
+
+Una vez realizados los pasos anteriores, genera el json o diccionario con la informacion correspondiente.
+
+Ejemplo de la estructura de replacements:
+[{
+    "Nombre_variable": "Valor que corresponde, extraido de source"
+}]

@@ -11,15 +11,16 @@ const { upload } = require("../../middlewares/multer.config");
 const { validateFile } = require("../../Utils/validateFiles");
 
 const PropertiesReader = require('properties-reader');
-const { replacements } = require('../../Utils/replacements');
+const { replacements } = require('../../Utils/replacements/replacements');
 const { replaceInDoc } = require('../../Utils/docx/replacePlaceholders');
+const { validateObjectValues } = require('../../Utils/validateObjectValues');
 const properties = PropertiesReader('./app.properties.ini');
 
 
 // Configuración de OpenAI
-const openai = new OpenAI({
-	apiKey: `${properties.get('app.gpt.key')}`,
-});
+// const openai = new OpenAI({
+// 	apiKey: `${properties.get('app.gpt.key')}`,
+// });
 
 
 router.get("/output", async (request, response) => {
@@ -56,6 +57,30 @@ router.post("/upload", upload.array("file"), async (request, response) => {
         const templateBuffer = fs.readFileSync(path.join(__dirname, '../../template', 'template.docx'));
 
 		const outputBufffer = await replaceInDoc(templateBuffer, replacements);
+
+        const outputPath = path.resolve(__dirname, '../../processed', 'output.docx');
+
+        fs.writeFileSync(outputPath, outputBufffer);
+
+
+		return response.json({Status: "Success", message: "Archivo procesado correctamente"});
+	}
+	catch (err) {
+		return response.status(500).json({Error: err.message});
+	}
+});
+
+router.post("/json", async (request, response) => {
+	try {
+		validateObjectValues(request.body);
+
+		const { jsonValue } = request.body;
+
+		const parsedJSON = JSON.parse(jsonValue);
+
+        const templateBuffer = fs.readFileSync(path.join(__dirname, '../../template', 'template.docx'));
+
+		const outputBufffer = await replaceInDoc(templateBuffer, parsedJSON[0]);
 
         const outputPath = path.resolve(__dirname, '../../processed', 'output.docx');
 

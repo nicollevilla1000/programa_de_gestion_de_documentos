@@ -1,3 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
 import "./styles.css";
 
 const WrapperContainer1 = ({children, flexDirection = "row", padding = 30, gap = 15, justifyContent="start", alignItems="center"}) => {
@@ -64,4 +67,19 @@ const WrapperContainer4 = ({children, flexDirection = "row", padding = 20, paddi
     );
 }
 
-export { WrapperContainer1, WrapperContainer2, WrapperContainer3, WrapperContainer4 };
+const CodeWrapper = ({json}) => {
+    return(
+        <SyntaxHighlighter 
+            language="json" 
+            style={dracula} 
+            showLineNumbers={true} 
+            lineNumberContainerStyle={true}
+            showInlineLineNumbers={true}
+        > 
+            {json}
+            {/* const value = ""; */}
+        </SyntaxHighlighter>
+    );
+}
+
+export { WrapperContainer1, WrapperContainer2, WrapperContainer3, WrapperContainer4, CodeWrapper };

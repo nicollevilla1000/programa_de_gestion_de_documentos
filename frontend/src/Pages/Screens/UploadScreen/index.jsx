@@ -7,7 +7,7 @@ const UploadScreen = () => {
         <AuthWrapper>
             <IsAuthWrapper notFound={true}>
                 <Title>
-                    Carga de Archivos para Publicación
+                    Carga de Datos para generacion de archivos
                 </Title>
                 <UploadInfoContainer/>
             </IsAuthWrapper>
