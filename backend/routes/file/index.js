@@ -14,6 +14,7 @@ const PropertiesReader = require('properties-reader');
 const { replacements } = require('../../Utils/replacements/replacements');
 const { replaceInDoc } = require('../../Utils/docx/replacePlaceholders');
 const { validateObjectValues } = require('../../Utils/validateObjectValues');
+const { createOutputFile } = require('../../Utils/createOutputFile');
 const properties = PropertiesReader('./app.properties.ini');
 
 
@@ -25,7 +26,7 @@ const properties = PropertiesReader('./app.properties.ini');
 
 router.get("/output", async (request, response) => {
 	try {
-		const outputPath = path.resolve(__dirname, '../../processed', 'output.docx');
+		const outputPath = path.resolve(__dirname, '../../project_files/output', 'output.docx');
 
 		if (!(fs.existsSync(outputPath))) {
 			return response.status(404).json({ Error: 'Archivo no encontrado' });
@@ -54,13 +55,7 @@ router.post("/upload", upload.array("file"), async (request, response) => {
 		// 	console.log(chunk.choices[0].delta.content || "");
 		// }
 
-        const templateBuffer = fs.readFileSync(path.join(__dirname, '../../template', 'template.docx'));
-
-		const outputBufffer = await replaceInDoc(templateBuffer, replacements);
-
-        const outputPath = path.resolve(__dirname, '../../processed', 'output.docx');
-
-        fs.writeFileSync(outputPath, outputBufffer);
+        await createOutputFile(replacements);
 
 
 		return response.json({Status: "Success", message: "Archivo procesado correctamente"});
@@ -78,14 +73,7 @@ router.post("/json", async (request, response) => {
 
 		const parsedJSON = JSON.parse(jsonValue);
 
-        const templateBuffer = fs.readFileSync(path.join(__dirname, '../../template', 'template.docx'));
-
-		const outputBufffer = await replaceInDoc(templateBuffer, parsedJSON[0]);
-
-        const outputPath = path.resolve(__dirname, '../../processed', 'output.docx');
-
-        fs.writeFileSync(outputPath, outputBufffer);
-
+        await createOutputFile(parsedJSON);
 
 		return response.json({Status: "Success", message: "Archivo procesado correctamente"});
 	}
