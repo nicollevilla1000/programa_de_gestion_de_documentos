@@ -1,0 +1,45 @@
+Instrucciones para procesamiento de documentos empresariales:
+
+Objetivo: Tu tarea será leer, procesar y extraer información específica que difiere entre varios documentos relacionados con distintas empresas. Sigue los pasos detallados a continuación y genera un archivo JSON con los datos correspondientes.
+
+Instrucciones detalladas:
+Lectura y comprensión del documento:
+
+ - Abre y analiza el documento source.
+ - Identifica la información clave, como nombres de empresas, identificadores, fechas y cualquier otro dato relevante que varíe entre los documentos. Esta informacion la desbes encontrar segun el contexto del documento
+
+
+Identificación de variables:
+
+ - Revisa el documento plantilla. Las variables a reemplazar siguen la estructura: {{Nombre_variable}}.
+ - Utiliza la información del archivo voidReplacements para identificar todas las variables que deben ser reemplazadas.
+
+
+Reemplazo de variables:
+
+ - Asocia cada variable de la plantilla con la información correspondiente del documento source.
+ - Si una variable no tiene información disponible en el source, asigna el valor "INDEFINIDO".
+
+
+Repetir el proceso:
+
+ - Aplica este proceso a todas las variables presentes en la plantilla, asegurándote de que cada reemplazo sea correcto segun el contexto de la informacion encontrada en el documento.
+
+
+Generación del JSON:
+
+Una vez que todos los reemplazos estén completos, genera un archivo JSON siguiendo esta estructura:
+[
+  {
+    "Nombre_variable": "Valor extraído del source",
+	"Nombre_variable2": "Valor extraído del source"
+  }
+]
+Recuerda que la variable Queja_o_denuncia se refiere al número de queja o reclamo.
+
+Nota importante:
+
+Precisión crítica: cualquier error en la información puede ser perjudicial, por lo que prioriza la precisión incluso si el análisis toma más tiempo.
+Alta prioridad: todos los detalles proporcionados en esta instrucción son cruciales y deben ser seguidos rigurosamente.
+Resultado: Mostrar el codigo JSON resultante del proceso anterior.
+Confirmación: Si estás listo para proceder, comenzaremos a enviarte los archivos.
