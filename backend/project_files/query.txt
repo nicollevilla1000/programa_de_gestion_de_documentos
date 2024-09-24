@@ -33,9 +33,12 @@ Ejemplo de la estructura de replacements:
     "Nombre_variable": "Valor que corresponde, extraido de source"
 }]
 
-Es importante recalcar que la variable Queja_o_denuncia es el numero de queja o reclamo.
 
-Lo que debes realizar despues de analizar el documento y realizar el json, es UNICAMENTE mostrar todo el JSON con la estructura definida.
-Ten en cuenta que debes analizar a profundidad los documentos enviados, ya que cualquier error en la informacion puede ser perjudicial. No importa que demore mas tiempo en realizar el analisis de informacion.
-Igualmente recuerda que toda la informacion presentada en este mensaje es de alta prioridad. No lo olvides
-Si te encuentras listo, se comenzara a enviar los archivos necesarios.
+Notas importantes:
+
+ - Lo que debes realizar despues de analizar el documento y realizar el json, es UNICAMENTE mostrar todo el JSON con la estructura definida listo para copiar y pegar.
+ - Ten en cuenta que debes analizar a profundidad los documentos enviados, ya que cualquier error en la informacion puede ser perjudicial.
+ - No importa que demore mas tiempo en realizar el analisis de informacion.
+ - Igualmente recuerda que toda la informacion presentada en este mensaje es de alta prioridad. No lo olvides
+ - Debe utilizar las variables encontradas en voidReplacements y asignarle el valor correspondiente a cada uno
+ - Si te encuentras listo, se comenzara a enviar los archivos necesarios.
