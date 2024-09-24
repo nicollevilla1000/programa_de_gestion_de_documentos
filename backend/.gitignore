@@ -6,3 +6,5 @@
 
 app.properties.ini
 *.ini
+
+output.docx
